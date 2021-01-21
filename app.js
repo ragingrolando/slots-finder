@@ -7,7 +7,7 @@ function getSlots() {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            returned_slots.innerHTML = `<p>${data[0]}</p>`
+            returned_slots.innerHTML = `<p>${data[0].date}</p>`
         })
 }
 
