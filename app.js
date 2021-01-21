@@ -4,8 +4,11 @@ const slotsURL = "https://bookings.qudini.com/booking-widget/booker/slots/AGH63N
 
 function getSlots() {
     fetch(slotsURL)
-        .then(res = res.json())
+        .then(res => res.json())
         .then(data => {
-            returned_slots.innerHTML = `<p>${data.date}</p>`
+            console.log(data);
+            returned_slots.innerHTML = `<p>${data[0]}</p>`
         })
 }
+
+getSlots()
